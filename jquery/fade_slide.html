@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jquery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+
+<body>
+<div>
+    <p>
+        Sıfırda nileri düzey web geliştirme 
+     </p>
+     <img src="sena_nur_erturk.jpg" width="150px">
+</div>
+
+
+ <button id="slideup">Slide up</button>
+ <button id="slidedown">Slide Down</button>
+ <button id="toggle">Toggle</button>
+
+<br> <br>
+
+ <button id="fadein">fade in</button>
+ <button id="fadeout">fade out</button>
+ <button id="fadeto">fade to</button>
+ <button id="toggle2">Toggle</button>
+    <script>
+
+ $(document).ready(function(){
+   $("#slideup").click(function(){
+    $("div").slideUp(3000);
+   })
+   $("#slidedown").click(function(){
+    $("div").slideDown(1000 ,function(){
+        alert("paragraf gösterildi")
+    });
+   })
+   $("#toggle").click(function(){
+    $("div").slideToggle("slow");
+   })
+
+
+   $("#fadein").click(function(){
+    $("div").fadeIn("slow");
+   })
+   $("#fadeout").click(function(){
+    $("div").fadeOut(1000 ,function(){
+        alert("paragraf gösterildi")
+    });
+   })
+   $("#fadeto").click(function(){
+    $("div").fadeTo("slow", 0.5); // opcity degişimi
+   })
+   $("#toggle2").click(function(){
+    $("div").fadeToggle("slow");
+   })
+
+
+
+
+ })
+
+
+    </script>
+
+</body>
+
+</html>

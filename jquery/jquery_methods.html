@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Jquery</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    .highlight{
+        background-color: rgb(71, 19, 19);
+    }
+    .orange{
+        background-color: orange;
+    }
+  </style>
+    </head>
+
+<body>
+    <h3 id="header">Kurslarım</h3>
+    <ul id="liste">
+        <li class="item1">web geliştirme</li>
+        <li>python <a href="#">link</a></li>
+        <li>Android ve ios geliştirme</li>
+    </ul>
+<img src="./sena_nur_erturk.jpg" width="200">
+    <input id="ad" type="text" placeholder="adınız">
+    <input id="soyad" type="text" placeholder="soy adınız">
+    <button id="btnKayitOl" onclick="kayitOl()">Kayıt ol</button>
+    <script>
+ 
+  console.log( $("h3").text());
+ $("h3").text("udemy kursları"); //h3 içini udemy kurları olara kdegiştirir.
+
+
+ function kayitOl(){
+    var ad = $("#ad").val() ; //kullanıcının girdigi veriyi getirir.
+    var soyad= $("#soyad").val();
+    console.log(ad+" "+soyad+" kursa kayıt ol");
+    $("#ad").addClass("highlight"); // class ekler
+    $("#soyad").toggleClass("orange"); // her tıklandıgında tersine döner.
+    //removeClass  class  siler.
+ }
+
+
+ $("img").attr("width","350");
+    </script>
+    
+</body>
+
+</html>
